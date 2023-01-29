@@ -79,9 +79,41 @@ account_data = [("I need to reset my password", "account"),
                 ("I can't log into my account", "account"),
                 ("I want to update my account information", "account")]
 
-shipping_data = [("When will my order be shipped?", "shipping"),
-                 ("How can I track my package?", "shipping"),
-                 ("Can you expedite my shipping?", "shipping")]
+shipping_data = [("When will my order arrive?", "shipping"),
+                ("What is the estimated delivery time?", "shipping"),
+                ("How many days does it take for delivery?", "shipping"),
+                ("Can you give me an update on my shipment?", "shipping"),
+                ("Where is my package?", "shipping"),
+                ("Has my shipment been sent yet?", "shipping"),
+                ("Can you track my order for me?", "shipping"),
+                ("Can you provide a shipping update?", "shipping")]
+
+shipping_cost_data = [("how much is the shipping?", "shipping_cost"),
+                    ("what is the cost of shipping?", "shipping_cost"),
+                    ("how much does shipping cost?", "shipping_cost"),
+                    ("what is the shipping fee?", "shipping_cost"),
+                    ("how much will it cost to ship?", "shipping_cost"),
+                    ("can you tell me the shipping cost?", "shipping_cost"),
+                    ("what is the shipping charge?", "shipping_cost"),
+                    ("how much does it cost to have it shipped?", "shipping_cost")]
+
+payment_data = [("What payment methods do you accept?", "payment"),
+            ("Can I pay using my credit card?", "payment"),
+            ("Do you accept PayPal?", "payment"),
+            ("Is it possible to pay with a debit card?", "payment"),
+            ("How can I make a payment?", "payment"),
+            ("What are my options for payment?", "payment"),
+            ("Can I use Apple Pay for payment?", "payment"),
+            ("Do you support online payment?", "payment")]
+
+payment_proof_data = [("How do I submit proof of payment?", "payment_proof"),
+                    ("Can I send a screenshot as proof of payment?", "payment_proof"),
+                    ("What is the preferred method for sending payment proof?", "payment_proof"),
+                    ("Do you need a receipt as proof of payment?", "payment_proof"),
+                    ("Can I send the payment proof via email?", "payment_proof"),
+                    ("Is it possible to upload proof of payment on the website?", "payment_proof"),
+                    ("What should I do after making a payment?", "payment_proof"),
+                    ("Where can I find my payment confirmation?", "payment_proof")]
 
 refund_data = [("I want a refund for my order", "refund"),
                ("I am not satisfied with my purchase and would like my money back", "refund"),
@@ -99,7 +131,7 @@ basic_data = [("I am having trouble with my account", "problem"),
                  ("I am satisfied with your service", "satisfaction"),
                  ("I appreciate your help", "thanks")]
 
-training_data = account_data + shipping_data + refund_data + complaints_data + basic_data + greeting_data
+training_data = account_data + shipping_data + refund_data + complaints_data + basic_data + greeting_data + payment_data + payment_proof_data + shipping_cost_data + shipping_cost
 
 # Tokenize the input text
 training_data = [(word_tokenize(text), label) for text, label in training_data]
