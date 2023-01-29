@@ -131,7 +131,7 @@ basic_data = [("I am having trouble with my account", "problem"),
                  ("I am satisfied with your service", "satisfaction"),
                  ("I appreciate your help", "thanks")]
 
-training_data = account_data + shipping_data + refund_data + complaints_data + basic_data + greeting_data + payment_data + payment_proof_data + shipping_cost_data + shipping_cost
+training_data = account_data + shipping_data + refund_data + complaints_data + basic_data + greeting_data + payment_data + payment_proof_data + shipping_cost_data
 
 # Tokenize the input text
 training_data = [(word_tokenize(text), label) for text, label in training_data]
