@@ -22,6 +22,6 @@ def chatbot_response(question):
     return answer
 
 # Test the chatbot
-question = input("Ask your question. Ex:What is the return policy for your products? :")
+question = input("Ask your question. Ex: What is the return policy for your products? :")
 print("Question:", question)
 print("Answer:", chatbot_response(question))
